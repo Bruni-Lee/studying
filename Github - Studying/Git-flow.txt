@@ -1,0 +1,13 @@
+Git - flow 
+
+깃플로우 전략은 소프트웨어의 소스코드를 관리하고 출시하기 위한
+ '브랜치 관리 전략(branch management strategy)'중 하나이다.
+
+git-flow는 vicent Driessen 이 제안한 git의 workflow를 기반한 브랜칭 모델이고 브랜치 종류는 5가지
+크게 항상 유지되는 메인브랜치(Master, Develop)과 보조브랜치(feature, realese, hotfix)로 나뉨
+
+Master - 제품으로 출시 되는 브랜치 (Develop에서 최종 작업 후 Master 브랜치로 Commit)
+Develop - 다음 출시 버전을 개발하는 브랜치
+Feature - 기능을 개발하는 브랜치 (기능 개발 완료시 Develop으로 commit후 수시로 삭제,생성 하는 브랜치)
+Realease - 이번 출시 버전을 준비하는 브랜치
+Hotfix - 출시 버전에서 발생한 버그를 긴급하게 수정하는 브랜치 
