@@ -27,32 +27,32 @@ class FactoryPattern
     {
         public abstract void Speak();
     }
-    abstract class Animal_Factory
+    abstract class Animal_Factory //모든 동물들의 공통된 속성과 생성을 하는 class
     {
         public abstract Animal Create_Animal(ANIMAL_TYPE type);
     }
-    class Cat : Animal
+    class Cat : Animal //각각의 고양이 객체 클래스
     {
         public override void Speak()
         {
             Console.WriteLine("Meow");
         }
     }
-    class Dog : Animal
+    class Dog : Animal //각각의 강아지 객체 클레스
     {
         public override void Speak()
         {
             Console.WriteLine("Bark");
         }
    }
-    class EmptyAnimal : Animal
+    class EmptyAnimal : Animal // 없는 객체의 판별을 위한 클래스
     {
         public override void Speak()
         {
             Console.WriteLine("Invalid Type.");
         }
     }
-    class Cat_Factory : Animal_Factory
+    class Cat_Factory : Animal_Factory // 고양이의 객체들에 공통된 속성을 갖고 모든 고양이 객체들을 관리할 수 있는 클래스
     {
         static int Cat_Count = 0;
 
@@ -73,7 +73,7 @@ class FactoryPattern
             return Cat_Count;
         }
     }
-    class Dog_Factory : Animal_Factory
+    class Dog_Factory : Animal_Factory // 강아지의 객체들에 공통된 속성을 갖고 모든 강아지 객체들을 관리할 수 있는 클래스
     {
         static int legs_for_all_dogs = 0;
         static int count = 0;
